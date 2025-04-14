@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- choosyfoody/about-us.html  29 Nov 2019 03:42:24 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>ABOUT</title>
+
+    <!-- GOOGLE FONTS CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,500,600,700,800&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- FONTAWESOME CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
+
+    <!-- BOOTSTRAP DATETIME PICKER CSS -->
+    <link href="datetimepicker/css/tempusdominus-bootstrap-4.css" rel="stylesheet">
+
+    <!-- ANIMATION CSS -->
+    <link rel="stylesheet" href="css/vendors/cssanimation.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main/style.css">
+
+    <!-- RESPONSIVE CSS -->
+    <link rel="stylesheet" href="css/responsive/responsive.css">
+
+</head>
+
+<!-- CONSULTATION REQUEST MODAL PART START -->
+<div class="modal" id="consultationModal" tabindex="-1" role="dialog" aria-labelledby="consultationModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="book-table">
+                    <div class="col-right">
+                        <div class="content text-center">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            <h3>Request a Consultation</h3>
+
+                            <form action="#" name="consultationRequest">
+                                <div class="input-group">
+                                    <select class="form-control" id="projectType">
+                                        <option value="" disabled selected>Project Type</option>
+                                        <option value="residential">Residential</option>
+                                        <option value="commercial">Commercial</option>
+                                        <option value="contractor">Contractor</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <select class="form-control" id="serviceType">
+                                        <option value="" disabled selected>Service Needed</option>
+                                        <option value="flooring">Flooring</option>
+                                        <option value="walls">Wall Cladding</option>
+                                        <option value="countertops">Countertops</option>
+                                        <option value="pavers">Pavers</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-tools"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" id="datePicker"
+                                        data-target="#datetimepicker4" autocomplete="off" placeholder="Preferred Date"
+                                        onkeydown="return false" />
+                                    <div class="input-group-append" data-target="#datetimepicker4"
+                                        data-toggle="datetimepicker">
+                                        <div class="input-group-text" id="calendar">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" id="timePicker"
+                                        data-target="#datetimepicker3" autocomplete="off" placeholder="Preferred Time"
+                                        onkeydown="return false" />
+                                    <div class="input-group-append" data-target="#datetimepicker3"
+                                        data-toggle="datetimepicker">
+                                        <div class="input-group-text" id="time">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" autocomplete="off"
+                                        placeholder="Your Name" />
+                                    <div class="input-group-append">
+                                        <div class="input-group-text" id="yourname">
+                                            <i class="fas fa-user-edit"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" autocomplete="off"
+                                        placeholder="Your Phone No." />
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" autocomplete="off"
+                                        placeholder="Your Email" />
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-at"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <textarea class="form-control" placeholder="Project Details (Optional)" rows="3"></textarea>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-comment"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn subbtn" type="submit">Request Consultation</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CONSULTATION REQUEST MODAL PART END -->
+
+<body class="about-us-body">
+
+    <!-- NAV BAR PART START -->
+    <nav id="navbar-id" class="navbar navbar-expand-lg navbar-fixed-top navbar-light cf-nav">
+        <div class="container">
+    
+            <a id="logo" class="navbar-brand" href="index.html">
+                <img src="images/1.jpg" alt="Nature Craft Marble Logo" class="img-fluid" style="max-height: 60px; width: auto;">
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+    </nav>
+    <!-- NAV BAR PART END -->
+
+    <!-- PAGE HEADER PART START -->
+    <section id="full-page-header" class="page-header">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-12 p-0 header">
+
+                    <div class="content text-center">
+
+                        <h2>About Us</h2>
+
+                        <h3>Discover our story</h3>
+
+                        <img src="images/title-shape.svg" alt="Title Shape Image">
+
+                        <div class="breadcrumbs">
+                            <ul class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">About Us
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PAGE HEADER PART END -->
+
+   <!-- ABOUT US PART START -->
+<section id="full-about-us-page" class="about-us-page about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 order-2 d-lg-none d-xl-none col-left">
+                <img src="images/23.jpg" alt="Nature Craft Marble Showroom" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 d-none d-lg-block col-left">
+                <img src="images/23.jpg" alt="Nature Craft Marble Showroom" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-right">
+                <div class="content">
+                    <h2>Who We Are</h2>
+                    <h3>Nature Craft Marble</h3>
+                    <img src="images/title-shape.svg" alt="Title Shape Image">
+                    <p class="headline">"Your Premier Natural Stone Destination in Southeast Florida"</p>
+
+                    <p class="d-xl-none">
+                        Nature Craft Marble Inc. is a direct importer of premium natural stone, specializing in Italian Travertine Navona and Alabastrino. We offer an extensive selection of flooring, wall coverings, pavers, and custom stonework for both residential and commercial projects.<br><br>
+                        Our commitment to quality and excellence has made us the trusted choice for builders, designers, and homeowners throughout southeast Florida. We provide expert consultation and installation services, ensuring every project reflects the timeless beauty of natural stone.
+                    </p>
+
+                    <p class="d-none d-xl-block">
+                        Nature Craft Marble Inc. is a direct importer of premium natural stone, specializing in Italian Travertine Navona and Alabastrino. We offer an extensive selection of flooring, wall coverings, pavers, and custom stonework for both residential and commercial projects. Our commitment to quality and excellence has made us the trusted choice for builders, designers, and homeowners throughout southeast Florida.
+                    </p>
+
+                    <p class="d-none d-xl-block">
+                        Our showroom features an impressive collection of stones from around the world, carefully selected to meet the highest standards of quality and beauty. From elegant marble to classic travertine, we provide materials that transform spaces into stunning environments. Our expert team offers comprehensive support from selection to installation, ensuring your vision is perfectly executed with the finest materials available.
+                    </p>
+
+                    <div class="phone">
+                        <p>Contact Us</p>
+                        <p>561-246-6024</p>
+                    </div>
+                    <div class="days">
+                        <p>Location</p>
+                        <p>517 NE 5th Ave, Boynton Beach, FL</p>
+                    </div>
+                    <div class="hours">
+                        <p>Business Hours</p>
+                        <p>Monday - Friday: 9am to 5pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ABOUT US PART END -->
+
+    <!-- FOOTER PART START -->
+<section id="full-footer" class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-sm-6 col-md-6 col-xl-4 col-1">
+                    <div class="row">
+                        <div class="col-md-12 logo">
+                            <p>
+                                <a href="index.html">
+                                    <img src="images/22.jpg" alt="Nature Craft Marble Logo" style="max-height: 60px; width: auto;">
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="social">
+                                <p class="text"></p>
+                                <ul>
+                                    <li>
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-xl-1 col-2">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-xl-4 col-3">
+                    <div class="phone">
+                        <p>561-246-6024</p>
+                    </div>
+
+                    <div class="mail">
+                        <p>SALE@NCMARBLE.COM</p>
+                    </div>
+
+                    <div class="address">
+                        <p>517 NE 5TH AVE</p>
+                        <p>BOYNTON BEACH</p>
+                        <p>FLORIDA 33435</p>
+                        <p>UNITED STATES</p>
+                    </div>
+                </div>
+
+                <div class="col col-12 col-sm-6 col-md-6 col-xl-3 col-4">
+                    <p>Request Information</p>
+
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="name" class="form-control" placeholder="Your name" autocomplete="off">
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email" autocomplete="off">
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="form-control" name="text" id="text" placeholder="Your inquiry"
+                                autocomplete="off"></textarea>
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit">Send Inquiry</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-left">
+                    <p>© 2025 Nature Craft Marble, Inc. All Rights Reserved.</p>
+                </div>
+
+                <div class="col-md-4 col-right d-none d-md-block">
+                    <p>Premium Natural Stone Importer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FOOTER PART END -->
+
+    <!-- CORE JQUERY -->
+    <script src="js/vendors/jquery-1.12.4.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="js/vendors/popper.min.js"></script>
+    <script src="js/vendors/bootstrap.min.js"></script>    
+    		
+    <!-- SLIDERS JS -->		
+    <script src="js/vendors/slick.min.js"></script>		
+
+    <!-- FILTER USED IN SPECIAL PART -->		
+    <script src="js/vendors/isotope.pkgd.min.js"></script>		
+
+    <!-- PARALLAX USED IN SPECIAL PART-->		
+    <script src="js/vendors/rellax.min.js"></script>	
+
+    <!-- DATE TIME PICKER JS Start-->
+    <script src="datetimepicker/js/moment-with-locales.min.js"></script>
+    <script src="datetimepicker/js/tempusdominus-bootstrap-4.js"></script>
+
+    <!-- ANIMATION SCROLLY JS -->
+    <script src="js/vendors/scrolly.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="js/main/custom.js"></script>
+
+</body>
+
+
+<!-- choosyfoody/about-us.html  29 Nov 2019 03:42:32 GMT -->
+</html>
